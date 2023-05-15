@@ -10,6 +10,7 @@ const UserComponent = () => {
   const { globalVariable, updateGlobalVariable } = useContext(GlobalContext);
   useEffect(() => {
     if (isAuthenticated) {
+      console.log(user);
         const { name, email } = user;
         const userId = generateRandomUserId(); // Replace this with your logic to generate a random userId
         const globalVariable = { name, email, userId };
